@@ -1,3 +1,5 @@
+module RungeKutta where
+
 f :: Floating a => a -> a -> a
 f x y = sin(x) - cos(y)
 
@@ -17,5 +19,3 @@ runge_kutta4 f a b n y0 = zip xk (drop 1 $ yk f a b n y0)
 
 		h = (b-a) / fromIntegral n
 		xk = [ a + k * h | k <- [0 .. fromIntegral n] ]
-
-main = print $ runge_kutta4 f 0 3 6 1
