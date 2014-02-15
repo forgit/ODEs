@@ -1,6 +1,6 @@
 module RungeKuttaSys (rk4Sys) where
 
-import Data.List
+import Data.List (zipWith4)
 
 f :: Double -> [Double] -> [Double]
 f x ys = [z, 2*x*z/(x*x+1)]
