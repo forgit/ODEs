@@ -7,7 +7,7 @@ f x ys = [z, 2*x*z/(x*x+1)]
 	where z = ys!!1
 
 exactSol :: (Floating a) => a -> a
-exactSol x = -x**3 + 3*x + 1
+exactSol x = x**3 + 3*x + 1
 
 
 eulerSys :: (Floating a, Enum a, Integral b) => (a -> [a] -> [a]) -> a -> a -> b -> [a] -> [(a, [a])]
